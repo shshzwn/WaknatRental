@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Booking List - Waknat Rental</title>
+    <link rel="shortcut icon" href="image/logo.png" type="image">
+    <style>
+        body { background: url('image/bookingbg.jpg') no-repeat center center/cover; }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="dashboard.html" class="navbar-logo"><img src="image/logo.png" class="logo">WAKNAT RENTAL</a>
+            <button class="navbar-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+            <ul class="navbar-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="booking.html" class="active">Booking</a></li>
+                <li><a href="service.html">Service</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="table-container">
+        <h2 style="text-align:center; color:#fff; margin-bottom:20px; font-size:2rem; background: rgba(0,0,0,0.5); padding:10px; border-radius:10px;">
+            Past Rental Orders (Current Month)
+        </h2>
+        
+        <div class="filter-container">
+            <label for="bikeFilter" style="margin-right: 10px;">Filter by Bike:</label>
+            <select id="bikeFilter">
+                <option value="all">All Bikes</option>
+                </select>
+        </div>
+
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Bike Model</th>
+                    <th>Booking Date</th>
+                    <th>Duration (Days)</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody id="bookingTableBody">
+                </tbody>
+        </table>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Waknat Rental</h3>
+                <p>"Sekali Datang, Pasti Datang Lagi"</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📍 123 Waknat Street, Kuala Lumpur, Malaysia</p>
+                <p>📞 +60 12-345 6789</p>
+                <p>✉️ support@waknatrental.com</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/shshzwn/#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.instagram.com/shshzwn/#" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.instagram.com/shshzwn/#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Waknat Rental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn"><ion-icon name="arrow-up-outline"></ion-icon></button>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

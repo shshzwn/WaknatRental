@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Service - Waknat Rental</title>
+    <link rel="shortcut icon" href="image/logo.png" type="image">
+    <style>
+        body { background: url('image/servicebg.jpg') no-repeat center center/cover; }
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="dashboard.html" class="navbar-logo"><img src="image/logo.png" class="logo">WAKNAT RENTAL</a>
+            <button class="navbar-toggle"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
+            <ul class="navbar-menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="service.html" class="active">Service</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="index.html" class="logout-btn">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="service-container">
+        
+        <h1 class="website-title">Manage Your Booking</h1>
+
+        <div class="service-grid">
+            <div class="service-form-box">
+                <h2>New Booking</h2>
+                <form id="serviceBookingForm">
+                    <input type="hidden" id="editIndex" value="-1">
+                    
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="person"></ion-icon></span>
+                        <input type="text" id="servName" required>
+                        <label>Full Name</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="call"></ion-icon></span>
+                        <input type="tel" id="servPhone" required>
+                        <label>Telephone Number</label>
+                    </div>
+
+                    <div class="input-box">
+                        <select id="servBike" required>
+                            </select>
+                        <label>Select Bike</label>
+                        <span class="icon"><ion-icon name="chevron-down-outline"></ion-icon></span>
+                    </div>
+
+                    <div class="input-box">
+                        <input type="date" id="servDate" required style="color:#fff;">
+                        <label>Date (mm/dd/yyyy)</label>
+                    </div>
+
+                    <div class="input-box">
+                        <span class="icon"><ion-icon name="time"></ion-icon></span>
+                        <input type="number" id="servDuration" min="1" max="30" required>
+                        <label>Duration (Days)</label>
+                    </div>
+
+                    <button type="submit" id="submitBtn">Add Booking</button>
+                </form>
+            </div>
+
+            <div class="user-bookings-list">
+                <h2>Your Current Bookings</h2>
+                <div id="myBookingList">
+                    <p style="text-align:center; margin-top:20px;">No bookings yet.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="price-list-container">
+            <h2 style="color:#162530; text-align:center; margin-bottom: 20px;">Bike Rental Rates</h2>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Bike Model</th>
+                        <th>Price per Day</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Yamaha Y15ZR</td><td>RM 30</td></tr>
+                    <tr><td>Honda RS150</td><td>RM 35</td></tr>
+                    <tr><td>Kawasaki Ninja 250</td><td>RM 80</td></tr>
+                    <tr><td>Honda Vario</td><td>RM 20</td></tr>
+                    <tr><td>Benelli RFS150</td><td>RM 55</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Waknat Rental</h3>
+                <p>"Sekali Datang, Pasti Datang Lagi"</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>📍 123 Waknat Street, Kuala Lumpur, Malaysia</p>
+                <p>📞 +60 12-345 6789</p>
+                <p>✉️ support@waknatrental.com</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/shshzwn/#" aria-label="Instagram"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="https://www.instagram.com/shshzwn/#" aria-label="Twitter"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.instagram.com/shshzwn/#" aria-label="Facebook"><ion-icon name="logo-facebook"></ion-icon></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Waknat Rental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <button id="scrollTopBtn"><ion-icon name="arrow-up-outline"></ion-icon></button>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
